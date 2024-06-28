@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-  ScrollView,
-  Image,
-  StyleSheet,
-} from "react-native";
+import { View, Text, TouchableOpacity, TextInput, Alert, ScrollView, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const PlantScreen = () => {
@@ -36,7 +27,7 @@ const PlantScreen = () => {
       }
 
       const response = await fetch(
-        "http://10.30.10.210/compproject/add_plant.php",
+        "http://IP/compproject/add_plant.php",
         {
           method: "POST",
           headers: {
