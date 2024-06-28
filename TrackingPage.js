@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  Image,
-  Alert,
-  ScrollView,
-} from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image, Alert, ScrollView } from "react-native";
 import { Calendar } from "react-native-calendars";
 
 const TrackingPage = ({ route }) => {
@@ -18,7 +10,7 @@ const TrackingPage = ({ route }) => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
-    fetch("http://10.30.10.210/compproject/get_plant_info.php", {
+    fetch("http://IP/compproject/get_plant_info.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
