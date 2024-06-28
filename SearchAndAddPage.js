@@ -1,17 +1,5 @@
 import React, { useState, useRef } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-  StyleSheet,
-  ImageBackground,
-  ScrollView,
-  Image,
-  Keyboard,
-  Dimensions,
-} from "react-native";
+import { View, Text, TouchableOpacity, TextInput, Alert, StyleSheet, ImageBackground, ScrollView, Image, Keyboard, Dimensions } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -62,7 +50,7 @@ const SearchAndAddPage = ({ route, navigation }) => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        "http://10.30.10.210/compproject/check_plant.php",
+        "http://IP/compproject/check_plant.php",
         {
           method: "POST",
           headers: {
@@ -139,7 +127,7 @@ const SearchAndAddPage = ({ route, navigation }) => {
       };
 
       const response = await fetch(
-        "http://10.30.10.210/compproject/user_plants.php",
+        "http://IP/compproject/user_plants.php",
         {
           method: "POST",
           headers: {
@@ -188,7 +176,7 @@ const SearchAndAddPage = ({ route, navigation }) => {
       }
 
       const response = await fetch(
-        "http://10.30.10.210/compproject/add_plant.php",
+        "http://IP/compproject/add_plant.php",
         {
           method: "POST",
           headers: {
