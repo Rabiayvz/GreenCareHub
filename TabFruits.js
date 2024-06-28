@@ -15,7 +15,7 @@ const TabFruits = () => {
   const [fruits, setFruits] = useState([]);
 
   useEffect(() => {
-    fetch("http://10.30.10.210/compproject/get_fruit.php", {
+    fetch("http://IP/compproject/get_fruit.php", {
       method: "POST",
       headers: {
         Accept: "application/json",
