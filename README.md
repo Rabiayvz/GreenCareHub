@@ -19,5 +19,6 @@ This project is a plant growing application developed using React Native and Jav
 - **Frontend**: Developed using React Native and JavaScript. UI was designed with Figma.
 - **Backend**: Data is managed with PHP and stored in a MySQL database using phpMyAdmin.
 
+Click to watch the demo:
 - [![Project Demo](https://img.youtube.com/vi/DuFKhNJae9M/0.jpg)](https://www.youtube.com/watch?v=DuFKhNJae9M)
 
