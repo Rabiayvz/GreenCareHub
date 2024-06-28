@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  Button,
-  StyleSheet,
-  TextInput,
-  ImageBackground,
-} from "react-native";
+import { View, Text, Button, StyleSheet, TextInput, ImageBackground } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default class EnthusiastSignUpScreen extends Component {
@@ -31,7 +24,7 @@ export default class EnthusiastSignUpScreen extends Component {
     ) {
       alert("Required Field is missing!");
     } else {
-      var InsertAPIURL = "http://10.30.10.210/compproject/insert1.php";
+      var InsertAPIURL = "http://IP/compproject/insert1.php";
       var headers = {
         Accept: "application/json",
         "Content-Type": "application/json",
