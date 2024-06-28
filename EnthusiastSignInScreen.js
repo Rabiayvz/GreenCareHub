@@ -1,14 +1,6 @@
 // EnthusiastSignInScreen.js
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  ImageBackground,
-  StyleSheet,
-  Alert,
-} from "react-native";
+import {View, Text, TouchableOpacity, TextInput, ImageBackground, StyleSheet, Alert } from "react-native";
 
 export default class EnthusiastSignInScreen extends Component {
   constructor(props) {
@@ -23,7 +15,7 @@ export default class EnthusiastSignInScreen extends Component {
 
   handleLogin = () => {
     const { nickname, password, userType } = this.state;
-    fetch("http://10.30.10.210/compproject/entsignincheck.php", {
+    fetch("http://?/compproject/entsignincheck.php", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -59,7 +51,7 @@ export default class EnthusiastSignInScreen extends Component {
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
-        Alert.alert("Hata", "Bir hata oluştu. Lütfen tekrar deneyin.");
+        Alert.alert("Error", "An error has occurred. Please try again.");
       });
   };
 
