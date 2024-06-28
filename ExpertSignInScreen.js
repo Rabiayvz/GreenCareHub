@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  Alert,
-  TouchableOpacity,
-  TextInput,
-  ImageBackground,
-} from "react-native";
+import { View, Text, Alert, TouchableOpacity, TextInput, ImageBackground } from "react-native";
 import { StyleSheet } from "react-native";
 
 class ExpertSignInScreen extends Component {
@@ -23,7 +16,7 @@ class ExpertSignInScreen extends Component {
   handleLogin = () => {
     const { nickname, password, userType } = this.state;
 
-    fetch("http://10.30.10.210/compproject/expsignincheck.php", {
+    fetch("http://IP/compproject/expsignincheck.php", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -50,7 +43,7 @@ class ExpertSignInScreen extends Component {
           }, 3000);
           this.handleSignIn(nickname);
         } else if (data.Message === "false") {
-          Alert.alert("Uyarı", "Nickname veya şifre yanlış!");
+          Alert.alert("Warning", "Nickname or password is incorrect!");
           this.setState({
             nickname: "",
             password: "",
@@ -59,7 +52,7 @@ class ExpertSignInScreen extends Component {
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
-        Alert.alert("Hata", "Bir hata oluştu. Lütfen tekrar deneyin.");
+        Alert.alert("Error", "An error has occurred. Please try again.");
       });
   };
 
