@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  Image,
-  ImageBackground,
-  FlatList,
-  StyleSheet,
-} from "react-native";
+import { View, Text, TouchableOpacity, TextInput, Image, ImageBackground, FlatList, StyleSheet} from "react-native";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
@@ -44,7 +35,7 @@ const Forum = ({ route }) => {
 
   const fetchQuestions = () => {
     axios
-      .get("http://10.30.10.210/compproject/get_all_questions.php")
+      .get("http://IP/compproject/get_all_questions.php")
       .then((response) => {
         if (response.data && Array.isArray(response.data)) {
           const data = response.data.map((item) => ({
@@ -74,7 +65,7 @@ const Forum = ({ route }) => {
   const handleAddTweet = () => {
     if (newTweetText.trim() !== "") {
       axios
-        .post("http://10.30.10.210/compproject/entquestion.php", {
+        .post("http://IP/compproject/entquestion.php", {
           nickname,
           question_text: newTweetText.trim(),
           userType,
