@@ -1,15 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  FlatList,
-  StyleSheet,
-  Image,
-  TextInput,
-  Alert,
-  Modal,
-} from "react-native";
+import { View, Text, TouchableOpacity, FlatList, StyleSheet, Image, TextInput, Alert, Modal } from "react-native";
 
 const FavoritePlants = ({ route }) => {
   const [selectedPlant, setSelectedPlant] = useState(null);
@@ -21,7 +11,7 @@ const FavoritePlants = ({ route }) => {
   const [showInput, setShowInput] = useState(false);
 
   useEffect(() => {
-    fetch("http://10.30.10.210/compproject/fav_plant.php")
+    fetch("http://IP/compproject/fav_plant.php")
       .then((response) => response.json())
       .then((data) => {
         setFavoritePlants(data);
@@ -80,7 +70,7 @@ const FavoritePlants = ({ route }) => {
 
     try {
       const response = await fetch(
-        "http://10.30.10.210/compproject/user_plants.php",
+        "http://IP/compproject/user_plants.php",
         {
           method: "POST",
           headers: {
